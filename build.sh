@@ -15,13 +15,14 @@
 # 	cd ..
 # fi
 
+DOOM_WAD_URL = "https://ultimate-doomcrt.vercel.app/doomu.wad"
 # exit if DOOM_WAD_URL is not set
-if [ ! -f "sdldoom-1.10/doom1.wad" ]; then
+if [ ! -f "sdldoom-1.10/doomu.wad" ]; then
 	if [ -z "$DOOM_WAD_URL" ]; then
 		echo "DOOM_WAD_URL is not set. Please set it to the URL of the DOOM WAD file."
 		exit 1
 	fi
-	curl "$DOOM_WAD_URL" -s -L -o sdldoom-1.10/doom1.wad
+	curl "$DOOM_WAD_URL" -s -L -o sdldoom-1.10/doomu.wad
 	sha1sum sdldoom-1.10/doom1.wad
 fi
 
