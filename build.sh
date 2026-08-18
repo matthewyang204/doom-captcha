@@ -22,7 +22,7 @@ if [ ! -f "sdldoom-1.10/doomu.wad" ]; then
 		echo "DOOM_WAD_URL is not set. Please set it to the URL of the DOOM WAD file."
 		exit 1
 	fi
-	curl "$DOOM_WAD_URL" -s -L -o sdldoom-1.10/doom1.wad
+	curl "$DOOM_WAD_URL" -s -L -o sdldoom-1.10/doomu.wad
 	sha1sum sdldoom-1.10/doomu.wad
 fi
 
