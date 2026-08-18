@@ -932,21 +932,12 @@
 
           // Create a wrapper that modifies key behavior
           SDL.lookupKeyCodeForEvent = function (event) {
-            // Ignore Escape key by returning 0
-            if (event.keyCode === 27) {
-              captchaContainer.blur();
-              return 0;
-            }
-
-            // Ignore Ctrl key by returning 0
-            if (event.keyCode === 17) {
-              return 0;
-            }
-
             // Treat Spacebar (keyCode 32) as Ctrl
             if (event.keyCode === 32) {
               return originalLookupKeyCodeForEvent({...event, keyCode: 17});
             }
+
+            // Use E for use
             if (event.keyCode === 69) {
               return originalLookupKeyCodeForEvent({...event, keyCode: 32});
             }
