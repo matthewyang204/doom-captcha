@@ -15,7 +15,7 @@
 # 	cd ..
 # fi
 
-DOOM_WAD_URL = "https://ultimate-doomcrt.vercel.app/doomu.wad"
+export DOOM_WAD_URL = "https://ultimate-doomcrt.vercel.app/doomu.wad"
 # exit if DOOM_WAD_URL is not set
 if [ ! -f "sdldoom-1.10/doomu.wad" ]; then
 	if [ -z "$DOOM_WAD_URL" ]; then
