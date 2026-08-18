@@ -30,7 +30,7 @@ cd sdldoom-1.10 || exit
 export EMCC_CFLAGS="-std=gnu89 -sUSE_SDL"
 emconfigure ./configure
 emmake make
-emcc -o index.html ./*.o --preload-file doom1.wad \
+emcc -o index.html ./*.o --preload-file doomu.wad \
 	-s ALLOW_MEMORY_GROWTH=1 --shell-file ../shell.html
 mkdir -p ../public
 mv index.* ../public
