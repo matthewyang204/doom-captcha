@@ -22,7 +22,7 @@ if [ ! -f "sdldoom-1.10/doom1.wad" ]; then
 		exit 1
 	fi
 	curl "$DOOM_WAD_URL" -s -L -o sdldoom-1.10/doom1.wad
-	sha1sum sdldoom-1.10/doom1.wad
+	sha1sum sdldoom-1.10/doomu.wad
 fi
 
 cd sdldoom-1.10 || exit
