@@ -28,6 +28,7 @@ fi
 
 cd sdldoom-1.10 || exit
 export EMCC_CFLAGS="-std=gnu89 -sUSE_SDL"
+aclocal && autoconf && automake --add-missing
 emconfigure ./configure
 emmake make
 emcc -o index.html ./*.o --preload-file doomu.wad -s ALLOW_MEMORY_GROWTH=1 -s 'INCOMING_MODULE_JS_API=["keyboardListeningElement","arguments","preRun","postRun","print","printErr","canvas","setStatus","monitorRunDependencies"]' --shell-file ../shell.html
