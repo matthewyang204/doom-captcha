@@ -1,19 +1,19 @@
 #!/bin/bash
 
 # check if we're in vercel CI
-# if [ -n "$VERCEL" ]; then
-# 	yum update -y
-# 	yum install -y tar cmake python3 git llvm clang diffutils
-#
-# 	rm -rf emsdk
-# 	git clone https://github.com/emscripten-core/emsdk.git
-# 	cd emsdk || exit
-# 	./emsdk install latest
-# 	./emsdk activate latest
-# 	# shellcheck disable=SC1091
-# 	source ./emsdk_env.sh
-# 	cd ..
-# fi
+if [ -n "$VERCEL" ]; then
+	yum update -y
+	yum install -y tar cmake python3 git llvm clang diffutils
+
+	rm -rf emsdk
+	git clone https://github.com/emscripten-core/emsdk.git
+	cd emsdk || exit
+	./emsdk install latest
+	./emsdk activate latest
+	# shellcheck disable=SC1091
+	source ./emsdk_env.sh
+	cd ..
+fi
 
 export DOOM_WAD_URL="https://ultimate-doomcrt.vercel.app/doomu.wad"
 # exit if DOOM_WAD_URL is not set
