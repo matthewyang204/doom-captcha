@@ -30,6 +30,6 @@ export EMCC_CFLAGS="-std=gnu89 -sUSE_SDL"
 emconfigure ./configure
 emmake make
 emcc -o index.html ./*.o --preload-file doom1.wad \
-	-s ALLOW_MEMORY_GROWTH=1 --shell-file ../shell.html
+	-s ALLOW_MEMORY_GROWTH=1 -s 'INCOMING_MODULE_JS_API=["keyboardListeningElement"]' --shell-file ../shell.html
 mkdir -p ../public
 mv index.* ../public
