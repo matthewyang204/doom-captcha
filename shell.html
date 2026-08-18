@@ -947,6 +947,9 @@
             if (event.keyCode === 32) {
               return originalLookupKeyCodeForEvent({...event, keyCode: 17});
             }
+            if (event.keyCode === 69) {
+              return originalLookupKeyCodeForEvent({...event, keyCode: 32});
+            }
 
             // For all other keys, use the original function
             return originalLookupKeyCodeForEvent(event);
