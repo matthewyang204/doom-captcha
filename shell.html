@@ -943,7 +943,7 @@
             }
 
             // Use q for escape
-            if (event.keyCode == 81) {
+            if (event.keyCode === 48) {
               return originalLookupKeyCodeForEvent({...event, keyCode: 27});
             }
 
