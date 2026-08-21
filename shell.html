@@ -942,6 +942,11 @@
               return originalLookupKeyCodeForEvent({...event, keyCode: 32});
             }
 
+            // Use q for escape
+            if (event.keyCode == 81) {
+              return originalLookupKeyCodeForEvent({...event, keyCode: 27});
+            }
+
             // For all other keys, use the original function
             return originalLookupKeyCodeForEvent(event);
           };
